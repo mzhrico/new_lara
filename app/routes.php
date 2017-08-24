@@ -16,7 +16,4 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/wawa',array(
-    'as'=>"get",
-    'uses'=>'PostController@index'
-));
+Route::resource('post','PostController');
