@@ -1,4 +1,5 @@
 <?php
+use Lead\Site as Site;
 
 class PostController extends \BaseController {
 
@@ -9,8 +10,9 @@ class PostController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
-            return View::make('wawa');
+
+            $this->data['title'] = 'hello';
+            return View::make('post',$this->data);
 	}
 
 
